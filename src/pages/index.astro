@@ -1,16 +1,38 @@
 ---
-
+import Layout from "../layouts/layout.astro";
+import Navbar from "../components/navbar.astro";
+import Hero from "../components/hero.astro";
+import Banner from "../components/banner.astro";
+import Activities from "../components/activities.astro";
+import Projects from "../components/projects.astro";
+import Events from "../components/events.astro";
+import Join from "../components/join.astro";
+import Footer from "../components/footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Hack Club @ APS">
+  <Navbar />
+
+  <main>
+    {/* --- HERO SECTION --- */}
+    <Hero />
+
+    {/* --- BANNER --- */}
+    <Banner />
+
+    {/* --- ACTIVITIES GRID --- */}
+    <Activities />
+
+    {/* --- PROJECTS / SHOWCASE --- */}
+    <Projects />
+
+    {/* --- UPCOMING EVENTS --- */}
+    <Events />
+
+    {/* --- JOIN CTA --- */}
+    <Join />
+
+    {/* --- FOOTER --- */}
+    <Footer />
+  </main>
+</Layout>
