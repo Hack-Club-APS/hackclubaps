@@ -33,3 +33,24 @@
 html {
   font-family: "Phantom Sans", system-ui, sans-serif;
 }
+
+.animate-box {
+  animation: slideup 1s ease-in-out;
+  animation-timeline: view(block 80% 0%);
+}
+
+.animatevent {
+  animation: slideup 1s ease-in-out;
+  animation-timeline: view(block 70% 0%);
+}
+
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}

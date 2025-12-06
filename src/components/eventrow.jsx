@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import React from 'react';
 
 const EventRow = ({ date, title, type, desc }) => (
-  <div className="group bg-white/10 hover:bg-white/20 backdrop-blur-sm p-6 rounded-xl border border-white/10 transition-all cursor-pointer flex flex-col sm:flex-row gap-4 sm:items-center">
+  <div className="animatevent group bg-white/10 hover:bg-white/20 backdrop-blur-sm p-6 rounded-xl border border-white/10 transition-all cursor-pointer flex flex-col sm:flex-row gap-4 sm:items-center">
     <div className="min-w-[80px] text-center bg-white/10 rounded-lg p-2 group-hover:bg-white group-hover:text-[#ec3750] transition-colors">
       <span className="block text-sm font-bold uppercase tracking-wider opacity-80">Date</span>
       <span className="block text-xl font-bold">{date}</span>
