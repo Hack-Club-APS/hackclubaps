@@ -11,7 +11,7 @@ import { Terminal, Moon, Sun, Menu, X } from "lucide-react";
       <a
         href="/"
         id="orpheus"
-        class="absolute w-auto h-12 -translate-x-5 overflow-hidden transform group-hover:-rotate-6 top-0 m-0 p-0 scale-[1.2] transition-transform duration-300 origin-top-left"
+        class="absolute w-auto h-12 -translate-x-4 overflow-hidden transform group-hover:-rotate-6 top-0 m-0 p-0 scale-[1.2] transition-transform duration-300 origin-top-left"
       >
         <img
           src="https://assets.hackclub.com/flag-orpheus-top.svg"
@@ -118,7 +118,7 @@ import { Terminal, Moon, Sun, Menu, X } from "lucide-react";
         "saturation-180",
       );
       navbar?.classList.remove("bg-transparent", "py-5");
-      orpheus?.classList.remove("scale-[1.2]");
+      orpheus?.classList.remove("scale-[1.2]", "-translate-x-4");
     } else {
       navbar?.classList.add("bg-transparent", "py-5");
       navbar?.classList.remove(
@@ -130,7 +130,7 @@ import { Terminal, Moon, Sun, Menu, X } from "lucide-react";
         "py-3",
         "saturation-180",
       );
-      orpheus?.classList.add("scale-[1.2]");
+      orpheus?.classList.add("scale-[1.2]", "-translate-x-4");
     }
   });
 
