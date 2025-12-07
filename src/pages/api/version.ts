@@ -22,6 +22,6 @@ export const GET = () => {
 
   return new Response(
     JSON.stringify({ ...data, ...vercel }, null, 2),
-    { headers: { "Content-Type": "application/json" } }
+    { headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" } }
   );
 };
