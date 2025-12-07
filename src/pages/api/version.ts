@@ -13,7 +13,15 @@ export const GET = () => {
     };
   }
 
-  return new Response(JSON.stringify(data), {
-    headers: { "Content-Type": "application/json" },
-  });
+  const vercel = {
+    vercelBuildId: process.env.VERCEL_BUILD_ID || null,
+    vercelCommitSha: process.env.VERCEL_GIT_COMMIT_SHA || null,
+    vercelCommitMessage: process.env.VERCEL_GIT_COMMIT_MESSAGE || null,
+    vercelBranch: process.env.VERCEL_GIT_COMMIT_REF || null
+  };
+
+  return new Response(
+    JSON.stringify({ ...data, ...vercel }, null, 2),
+    { headers: { "Content-Type": "application/json" } }
+  );
 };
