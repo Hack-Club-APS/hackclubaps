@@ -44,6 +44,16 @@ html {
   animation-timeline: view(block 70% 0%);
 }
 
+.gradient-text {
+  background: linear-gradient(90deg, #ec3750, #ff8c37, #ec3750, #ff8c37);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: flow 3s linear infinite;
+}
+
 @keyframes slideup {
   from {
     opacity: 0;
@@ -52,5 +62,15 @@ html {
   to {
     opacity: 1;
     transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    /* Move the background completely to the left */
+    background-position: 100% 50%;
   }
 }
