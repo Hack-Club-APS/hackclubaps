@@ -1,5 +1,5 @@
 ---
-import { Terminal, MessageSquare, ExternalLink, Github} from "lucide-astro";
+import { Terminal, Mail, Slack, ExternalLink, Users} from "lucide-astro";
 ---
 
 <footer
@@ -22,17 +22,24 @@ import { Terminal, MessageSquare, ExternalLink, Github} from "lucide-astro";
 
     <div class="flex gap-6">
       <a
+        href="mailto:hackclubaps@gmail.com"
+        class="flex items-center gap-2 hover:text-[#ec3750] transition-colors"
+      >
+        <Mail size={18} />
+        <span>Contact</span>
+      </a>
+      <a
         href="https://hackclub.slack.com"
         class="flex items-center gap-2 hover:text-[#ec3750] transition-colors"
       >
-        <MessageSquare size={18} />
+        <Slack size={18} />
         <span>Slack</span>
       </a>
       <a
         href="https://github.com/hack-club-aps"
         class="flex items-center gap-2 hover:text-[#ec3750] transition-colors"
       >
-        <Github size={18} />
+        <Users size={18} />
         <span>Team</span>
       </a>
       <a
