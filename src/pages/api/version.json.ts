@@ -1,11 +1,17 @@
 import fs from "fs";
+import path from "path";
 
 export const GET = () => {
   let data;
 
   try {
-    data = JSON.parse(fs.readFileSync("../../data/build-info.json", "utf-8"));
-  } catch {
+    const filePath = path.join(
+      process.cwd(),
+      "src/data/build-info.json"
+    );
+
+    data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  } catch (err) {
     data = {
       version: "dev",
       commit: "dev",
@@ -22,6 +28,11 @@ export const GET = () => {
 
   return new Response(
     JSON.stringify({ ...data, ...vercel }, null, 2),
-    { headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" } }
+    {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store"
+      }
+    }
   );
 };
