@@ -1,8 +1,5 @@
 import fs from "fs";
 
-export const prerender = false;
-export const runtime = "nodejs";
-
 export const GET = () => {
   let data;
 
