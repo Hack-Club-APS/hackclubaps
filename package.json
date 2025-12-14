@@ -1,7 +1,7 @@
 {
   "name": "hackclubaps",
   "type": "module",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "scripts": {
     "dev": "node scripts/build-info.mjs && astro dev",
     "build": "node scripts/build-info.mjs && astro build",
