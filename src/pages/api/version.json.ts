@@ -4,7 +4,7 @@ export const GET = () => {
   let data;
 
   try {
-    data = JSON.parse(fs.readFileSync("@/data/build-info.json", "utf-8"));
+    data = JSON.parse(fs.readFileSync("../../data/build-info.json", "utf-8"));
   } catch {
     data = {
       version: "dev",
