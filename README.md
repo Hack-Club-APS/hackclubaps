@@ -1,1 +1,74 @@
 # **[Hack Club](https://hackclub.com), [APS](https://adanipublicsschool.org)**
+We are teen hackers from around Adani Public School, Mundra who code together, hack on projects, and learn from each other.
+
+# Project Tree
+```
+📦 HackClubAPS
+├─ .gitignore
+├─ .vscode
+│  ├─ extensions.json
+│  └─ launch.json
+├─ .zed
+│  └─ settings.json
+├─ LICENSE
+├─ README.md
+├─ astro.config.mjs
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.cjs
+├─ public
+│  ├─ .assetsignore
+│  ├─ favicon.svg
+│  ├─ fonts
+│  │  ├─ Bold.woff
+│  │  ├─ Bold.woff2
+│  │  ├─ Italic.woff
+│  │  ├─ Italic.woff2
+│  │  ├─ Regular.woff
+│  │  └─ Regular.woff2
+│  └─ og-image.png
+├─ scripts
+│  └─ build-info.mjs
+├─ src
+│  ├─ components
+│  │  ├─ activities.astro
+│  │  ├─ banner.astro
+│  │  ├─ eventrow.astro
+│  │  ├─ events.astro
+│  │  ├─ footer.astro
+│  │  ├─ hero.astro
+│  │  ├─ join.astro
+│  │  ├─ meta.astro
+│  │  ├─ navbar.astro
+│  │  ├─ projects.astro
+│  │  ├─ team.astro
+│  │  └─ teamcard.astro
+│  ├─ config
+│  │  └─ meta.ts
+│  ├─ data
+│  │  └─ build-info.json
+│  ├─ layouts
+│  │  └─ base.astro
+│  ├─ lib
+│  │  └─ utils.ts
+│  ├─ meta
+│  │  └─ meta.json
+│  ├─ pages
+│  │  ├─ api
+│  │  │  └─ version.json.ts
+│  │  ├─ index.astro
+│  │  └─ team.astro
+│  └─ styles
+│     └─ global.css
+├─ tailwind.config.mjs
+└─ tsconfig.json
+```
+
+# License
+This project is licensed under the [MIT License](LICENSE).
+
+# Tech Stack
+- 🚀Astro
+- 🆎TypeScript
+- 🎨Tailwind CSS
+- 🌐Vercel
