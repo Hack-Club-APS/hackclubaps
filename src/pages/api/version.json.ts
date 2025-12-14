@@ -20,7 +20,8 @@ export const GET = () => {
   }
 
   const vercel = {
-    vercelBuildId: process.env.VERCEL_BUILD_ID || null,
+    commitAuthor: process.env.VERCEL_GIT_COMMIT_AUTHOR_NAME || null,
+    vercelENV: process.env.VERCEL_ENV || null,
     vercelCommitSha: process.env.VERCEL_GIT_COMMIT_SHA || null,
     vercelCommitMessage: process.env.VERCEL_GIT_COMMIT_MESSAGE || null,
     vercelBranch: process.env.VERCEL_GIT_COMMIT_REF || null
