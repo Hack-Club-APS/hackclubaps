@@ -1,0 +1,27 @@
+---
+import { ogMeta } from "@/config/meta";
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<meta
+  name="google-site-verification"
+  content="IM_RTASYZFUbeSY9Haw9VDzkF01t2o6IAdgxTlEwgRY"
+/>
+
+<meta name="description" content={ogMeta.description} />
+
+<meta property="og:title" content={ogMeta.title} />
+<meta property="og:description" content={ogMeta.description} />
+<meta property="og:url" content={ogMeta.url} />
+<meta property="og:image" content={ogMeta.image} />
+<meta property="og:type" content={ogMeta.type ?? "website"} />
+
+{
+  ogMeta.twitter && (
+    <>
+      <meta name="twitter:card" content={ogMeta.twitter.card} />
+      <meta name="twitter:image" content={ogMeta.twitter.image} />
+    </>
+  )
+}

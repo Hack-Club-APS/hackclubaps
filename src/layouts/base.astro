@@ -1,8 +1,7 @@
 ---
-import OGMeta from "@/components/ogmeta.astro";
-import { og } from "@/config/og";
+import Meta from "@/components/meta.astro";
 import Analytics from "@vercel/analytics/astro";
-import "../styles/global.css";
+import "@/styles/global.css";
 interface Props {
   title: string;
 }
@@ -12,17 +11,7 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Hack Club at Adani Public School, Mundra"
-    />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="google-site-verification"
-      content="IM_RTASYZFUbeSY9Haw9VDzkF01t2o6IAdgxTlEwgRY"
-    />
-    <OGMeta meta={og}/>
+    <Meta />
     <Analytics />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
