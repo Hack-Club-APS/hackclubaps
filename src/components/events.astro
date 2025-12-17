@@ -1,6 +1,7 @@
 ---
 import { Calendar } from "lucide-astro";
 import EventRow from "./eventrow.astro";
+import events from "@/data/events.json"
 ---
 
 <section id="events" class="py-24 bg-[#ec3750] text-white">
@@ -23,24 +24,14 @@ import EventRow from "./eventrow.astro";
     </div>
 
     <div class="space-y-4">
-      <EventRow
-        date="Oct 12"
-        title="Intro to Web Dev"
-        type="Workshop"
-        desc="Build your first personal website using HTML & CSS."
-      />
-      <EventRow
-        date="Oct 19"
-        title="Game Jam Kickoff"
-        type="Hackathon"
-        desc="We'll spend the afternoon brainstorming ideas for our club game jam."
-      />
-      <EventRow
-        date="Oct 26"
-        title="Hardware Hacking"
-        type="Demo"
-        desc="Tearing apart old printers and learning how motors work."
-      />
+      {events.map((event) => (
+        <EventRow
+          date={event.date}
+          title={event.title}
+          type={event.type}
+          desc={event.desc}
+        />
+      ))}
     </div>
   </div>
 </section>
