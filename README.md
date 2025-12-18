@@ -19,13 +19,6 @@ We are teen hackers from around Adani Public School, Mundra who code together, h
 ├─ public
 │  ├─ .assetsignore
 │  ├─ favicon.svg
-│  ├─ fonts
-│  │  ├─ Bold.woff
-│  │  ├─ Bold.woff2
-│  │  ├─ Italic.woff
-│  │  ├─ Italic.woff2
-│  │  ├─ Regular.woff
-│  │  └─ Regular.woff2
 │  └─ og-image.png
 ├─ scripts
 │  └─ build-info.mjs
@@ -41,12 +34,14 @@ We are teen hackers from around Adani Public School, Mundra who code together, h
 │  │  ├─ meta.astro
 │  │  ├─ navbar.astro
 │  │  ├─ projects.astro
-│  │  ├─ team.astro
-│  │  └─ teamcard.astro
+│  │  └─ team.astro
 │  ├─ config
 │  │  └─ meta.ts
 │  ├─ data
-│  │  └─ build-info.json
+│  │  ├─ build-info.json
+│  │  ├─ events.json
+│  │  ├─ members.json
+│  │  └─ team.json
 │  ├─ layouts
 │  │  └─ base.astro
 │  ├─ lib
