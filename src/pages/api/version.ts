@@ -1,7 +1,8 @@
+import type { APIRoute } from "astro";
 import fs from "fs";
 import path from "path";
 
-export const GET = () => {
+export const GET: APIRoute = () => {
   let data;
 
   try {
@@ -11,7 +12,7 @@ export const GET = () => {
     );
 
     data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-  } catch (err) {
+  } catch {
     data = {
       version: "dev",
       commit: "dev",
@@ -20,11 +21,11 @@ export const GET = () => {
   }
 
   const vercel = {
-    commitAuthor: process.env.VERCEL_GIT_COMMIT_AUTHOR_NAME || null,
-    vercelENV: process.env.VERCEL_ENV || null,
-    vercelCommitSha: process.env.VERCEL_GIT_COMMIT_SHA || null,
-    vercelCommitMessage: process.env.VERCEL_GIT_COMMIT_MESSAGE || null,
-    vercelBranch: process.env.VERCEL_GIT_COMMIT_REF || null
+    commitAuthor: process.env.VERCEL_GIT_COMMIT_AUTHOR_NAME ?? null,
+    vercelENV: process.env.VERCEL_ENV ?? null,
+    vercelCommitSha: process.env.VERCEL_GIT_COMMIT_SHA ?? null,
+    vercelCommitMessage: process.env.VERCEL_GIT_COMMIT_MESSAGE ?? null,
+    vercelBranch: process.env.VERCEL_GIT_COMMIT_REF ?? null,
   };
 
   return new Response(
@@ -32,8 +33,8 @@ export const GET = () => {
     {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "no-store"
-      }
+        "Cache-Control": "no-store",
+      },
     }
   );
 };
