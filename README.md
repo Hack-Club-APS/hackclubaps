@@ -4,12 +4,10 @@ The official website and codebase for **Hack Club APS** — a student-led coding
 
 > Think less theory, more shipping.
 
----
 
 ## 🌐 Live Site
 👉 https://hackclubaps.vercel.app
 
----
 
 ## 🧠 What is Hack Club APS?
 
@@ -18,7 +16,6 @@ We build projects, host workshops, run events, and learn by doing.
 
 This repo powers our **club website** — events, updates, and everything public-facing.
 
----
 
 ## 🛠 Tech Stack
 
@@ -30,7 +27,6 @@ This repo powers our **club website** — events, updates, and everything public
 
 Minimal stack. Maximum speed.
 
----
 
 ## 📁 Project Structure
 
@@ -68,7 +64,6 @@ npm run dev
 
 Open `http://localhost:4321` in your browser.
 
----
 
 ## 🧩 Contributing
 
@@ -83,7 +78,6 @@ Contributions are welcome — especially from club members.
 
 Keep it clean. Keep it readable.
 
----
 
 ## 📌 Ideas for Contributions
 
@@ -95,20 +89,17 @@ Keep it clean. Keep it readable.
 
 If it makes the site better, ship it.
 
----
 
 ## 🏫 About Hack Club
 
 Hack Club is a nonprofit global network of high school coding clubs.
 Learn more at [https://hackclub.com](https://hackclub.com)
 
----
 
 ## 📜 License
 
 [MIT License.](./LICENSE)
 Build freely. Learn loudly.
 
----
 
 ### Made with ❤️ by Hack Club APS
