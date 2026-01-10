@@ -1,69 +1,114 @@
-# **[Hack Club](https://hackclub.com), [APS](https://adanipublicsschool.org)**
-We are teen hackers from around Adani Public School, Mundra who code together, hack on projects, and learn from each other.
+# Hack Club APS 🚀
 
-# Project Tree
-```
-📦 HackClubAPS
-├─ .gitignore
-├─ .vscode
-│  ├─ extensions.json
-│  └─ launch.json
-├─ .zed
-│  └─ settings.json
-├─ LICENSE
-├─ README.md
-├─ astro.config.mjs
-├─ package-lock.json
-├─ package.json
-├─ postcss.config.cjs
-├─ public
-│  ├─ .assetsignore
-│  ├─ favicon.svg
-│  └─ og-image.png
-├─ scripts
-│  └─ build-info.mjs
-├─ src
-│  ├─ components
-│  │  ├─ activities.astro
-│  │  ├─ banner.astro
-│  │  ├─ eventrow.astro
-│  │  ├─ events.astro
-│  │  ├─ footer.astro
-│  │  ├─ hero.astro
-│  │  ├─ join.astro
-│  │  ├─ meta.astro
-│  │  ├─ navbar.astro
-│  │  ├─ projects.astro
-│  │  └─ team.astro
-│  ├─ config
-│  │  └─ meta.ts
-│  ├─ data
-│  │  ├─ build-info.json
-│  │  ├─ events.json
-│  │  ├─ members.json
-│  │  └─ team.json
-│  ├─ layouts
-│  │  └─ base.astro
-│  ├─ lib
-│  │  └─ utils.ts
-│  ├─ meta
-│  │  └─ meta.json
-│  ├─ pages
-│  │  ├─ api
-│  │  │  └─ version.json.ts
-│  │  ├─ index.astro
-│  │  └─ team.astro
-│  └─ styles
-│     └─ global.css
-├─ tailwind.config.mjs
-└─ tsconfig.json
+The official website and codebase for **Hack Club APS** — a student-led coding club focused on building, learning, and shipping cool things.
+
+> Think less theory, more shipping.
+
+---
+
+## 🌐 Live Site
+👉 https://hackclubaps.vercel.app
+
+---
+
+## 🧠 What is Hack Club APS?
+
+Hack Club APS is a local chapter of [Hack Club](https://hackclub.com), a global community of high school hackers.  
+We build projects, host workshops, run events, and learn by doing.
+
+This repo powers our **club website** — events, updates, and everything public-facing.
+
+---
+
+## 🛠 Tech Stack
+
+- ![Astro](https://img.shields.io/badge/Astro-000000?style=for-the-badge&logo=astro&logoColor=white)
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0f172a?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8) 
+- ![TypeScript](https://img.shields.io/badge/TypeScript-0f172a?style=for-the-badge&logo=typescript&logoColor=3178c6) 
+- ![JavaScript](https://img.shields.io/badge/JavaScript-0f172a?style=for-the-badge&logo=javascript&logoColor=f7df1e) 
+- ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) 
+
+Minimal stack. Maximum speed.
+
+---
+
+## 📁 Project Structure
+
+```txt
+/ HackClubAPS
+├─ src/
+│  ├─ components/   # Reusable UI components
+│  ├─ pages/        # Routes & pages
+│  ├─ layouts/      # Page layouts
+│  └─ data/         # JSON-based content
+├─ public/          # Static assets
+└─ astro.config.mjs
 ```
 
-# License
-This project is licensed under the [MIT License](LICENSE).
+## 🚀 Getting Started
 
-# Tech Stack
-- 🚀Astro
-- 🆎TypeScript
-- 🎨Tailwind CSS
-- 🌐Vercel
+Clone the repo:
+
+```bash
+git clone https://github.com/Hack-Club-APS/HackClubAps.git
+cd HackClubAps
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run locally:
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:4321` in your browser.
+
+---
+
+## 🧩 Contributing
+
+Contributions are welcome — especially from club members.
+
+**How to contribute:**
+
+1. Fork the repo
+2. Create a new branch
+3. Make your changes
+4. Open a Pull Request
+
+Keep it clean. Keep it readable.
+
+---
+
+## 📌 Ideas for Contributions
+
+* New pages (events, gallery, blog)
+* UI/UX improvements
+* Performance optimizations
+* Accessibility fixes
+* Content updates
+
+If it makes the site better, ship it.
+
+---
+
+## 🏫 About Hack Club
+
+Hack Club is a nonprofit global network of high school coding clubs.
+Learn more at [https://hackclub.com](https://hackclub.com)
+
+---
+
+## 📜 License
+
+[MIT License.](./LICENSE)
+Build freely. Learn loudly.
+
+---
+
+### Made with ❤️ by Hack Club APS
