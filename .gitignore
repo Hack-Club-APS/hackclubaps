@@ -28,5 +28,5 @@ pnpm-debug.log*
 
 # zed editor
 .zed/
-.vercel
+.vercel/
 .env*.local

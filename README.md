@@ -9,6 +9,10 @@ The official website and codebase for **Hack Club APS** — a student-led coding
 👉 https://hackclubaps.vercel.app
 
 
+## 📸 Mockup
+![Website Mockup](./media/Mockup.png)
+
+
 ## 🧠 What is Hack Club APS?
 
 Hack Club APS is a local chapter of [Hack Club](https://hackclub.com), a global community of high school hackers.  
