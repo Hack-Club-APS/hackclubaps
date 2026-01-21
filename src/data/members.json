@@ -1,0 +1,26 @@
+[
+  {
+    "name": "John Doe",
+    "github": "johndoe",
+    "bio": "Software Engineer",
+    "pfp": "https://example.com/john-doe.jpg"
+  },
+  {
+    "name": "Jane Smith",
+    "github": "janesmith",
+    "bio": "UX Designer",
+    "pfp": "https://example.com/jane-smith.jpg"
+  },
+  {
+    "name": "Alice Johnson",
+    "github": "alicejohnson",
+    "bio": "Data Scientist",
+    "pfp": "https://example.com/alice-johnson.jpg"
+  },
+  {
+    "name": "Bob Brown",
+    "github": "bobbrown",
+    "bio": "Full Stack Developer",
+    "pfp": "https://example.com/bob-brown.jpg"
+  }
+]
