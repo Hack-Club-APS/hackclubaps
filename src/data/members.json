@@ -2,25 +2,33 @@
   {
     "name": "John Doe",
     "github": "johndoe",
+    "slack": "",
     "bio": "Software Engineer",
-    "pfp": "https://example.com/john-doe.jpg"
+    "pfp": "☠️",
+    "color": "#1C1C1C"
   },
   {
     "name": "Jane Smith",
     "github": "janesmith",
+    "slack": "",
     "bio": "UX Designer",
-    "pfp": "https://example.com/jane-smith.jpg"
+    "pfp": "🤑",
+    "color": "#2ECC71"
   },
   {
     "name": "Alice Johnson",
     "github": "alicejohnson",
+    "slack": "",
     "bio": "Data Scientist",
-    "pfp": "https://example.com/alice-johnson.jpg"
+    "pfp": "👽",
+    "color": "#6CFF00"
   },
   {
     "name": "Bob Brown",
     "github": "bobbrown",
+    "slack": "",
     "bio": "Full Stack Developer",
-    "pfp": "https://example.com/bob-brown.jpg"
+    "pfp": "👻",
+    "color": "#6A5ACD"
   }
 ]

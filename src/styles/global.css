@@ -3,15 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Phantom Sans";
-  src:
-    url("/fonts/Regular.woff") format("woff"),
-    url("/fonts/Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: Phantom Sans;
   src:
     url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff)

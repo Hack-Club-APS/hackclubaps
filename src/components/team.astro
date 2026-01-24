@@ -1,6 +1,6 @@
 ---
 import { Github, Slack } from 'lucide-react';
-import teamMembers from "@/data/team.json";
+import team from "@/data/team.json";
 ---
 
 <section id="team" class="py-24 bg-white dark:bg-[#17171D] transition-colors">
@@ -16,7 +16,7 @@ import teamMembers from "@/data/team.json";
     </div>
 
     <div class="flex flex-wrap justify-center gap-8 md:gap-12">
-      {teamMembers.map((member) => (
+      {team.map((member) => (
         <div class="card-tilt group relative w-full sm:w-72 p-6 rounded-2xl bg-white dark:bg-[#252429] border border-slate-100 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300">
 
           <div class={`w-24 h-24 mx-auto rounded-full ${member.color} mb-6 flex items-center justify-center text-5xl border-4 border-white dark:border-slate-700 shadow-md group-hover:scale-110 transition-transform duration-300`}>
