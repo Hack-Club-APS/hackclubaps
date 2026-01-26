@@ -10,7 +10,6 @@ export const GET: APIRoute = () => {
     vercelBranch: process.env.VERCEL_GIT_COMMIT_REF ?? null,
   };
 
-  // Merge build info and Vercel info
   const data = { ...buildInfo, ...vercel };
 
   return new Response(JSON.stringify(data, null, 2), {
