@@ -3,100 +3,102 @@ import { ArrowRight, ExternalLink } from "lucide-astro";
 ---
 
 <section
-  class="py-24 border-t border-slate-200 dark:border-slate-800 transition-colors"
+    class="py-24 border-t border-slate-200 dark:border-slate-800 transition-colors"
 >
-  <div
-    class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12"
-  >
-    <div class="md:w-1/2">
-      <h2
-        class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 transition-colors"
-      >
-        We ship projects.
-      </h2>
-      <p
-        class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed transition-colors"
-      >
-        Hack Club isn't a class. It's a club. We don't have tests or grades. We
-        have projects. Whether it's a personal portfolio, a discord bot, or a
-        video game, you'll build something you're proud of.
-      </p>
-      <ul class="space-y-4 mb-8">
-        {
-          [
-            "Build your own website",
-            "Create a game in JS",
-            "Design a PCB",
-            "Deploy a web app",
-          ].map((item) => (
-            <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300 font-medium">
-              <div class="bg-green-100 p-1 rounded-full text-green-600">
-                <ArrowRight size={16} />
-              </div>
-              {item}
-            </li>
-          ))
-        }
-      </ul>
-      <a
-        href="https://hackclub.com/ship/"
-        target="_blank"
-        rel="noreferrer"
-        class="text-[#ec3750] font-bold text-lg underline hover:decoration-wavy inline-flex items-center gap-2"
-      >
-        See what Hack Clubbers build <ExternalLink size={18} />
-      </a>
-    </div>
-    <div class="md:w-1/2 relative">
-      <div
-        class="bg-[#121217] rounded-lg shadow-2xl overflow-hidden border border-[#8492a6] dark:border-slate-600 transform md:rotate-3 transition-transform hover:rotate-0 duration-500"
-      >
-        <div
-          class="bg-[#17171D] p-3 flex items-center gap-2 border-b border-[#8492a6] dark:border-slate-600"
-        >
-          <div class="w-3 h-3 rounded-full bg-red-500"></div>
-          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-          <div class="w-3 h-3 rounded-full bg-green-500"></div>
-          <div
-            class="ml-4 bg-[#252429] rounded-md px-3 py-1 text-xs text-slate-400 font-mono w-full"
-          >
-            hackclub-project.js
-          </div>
-        </div>
-        <div
-          class="p-6 font-mono text-sm text-slate-300 leading-relaxed overflow-x-auto"
-        >
-          <p>
-            <span class="text-purple-400">const</span>
-            <span class="text-yellow-400">club</span> = <span
-              class="text-blue-400">new</span
+    <div
+        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12"
+    >
+        <div class="md:w-1/2">
+            <h2
+                class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 transition-colors"
             >
-            <span class="text-green-400">HackClub</span>();
-          </p>
-          <p class="mt-2">
-            <span class="text-purple-400">while</span> (club.members.length &gt; 0)
-            {"{"}
-          </p>
-          <p class="ml-4 text-slate-400">// We build together</p>
-          <p class="ml-4">
-            <span class="text-yellow-400">club</span>.build(<span
-              class="text-orange-400">'Awesome Projects'</span
-            >);
-          </p>
-          <p class="ml-4">
-            <span class="text-yellow-400">club</span>.share(<span
-              class="text-orange-400">'Global Community'</span
-            >);
-          </p>
-          <p class="ml-4">
-            <span class="text-yellow-400">club</span>.haveFun(<span
-              class="text-blue-400">true</span
-            >);
-          </p>
-          <p class="mt-2">{"}"}</p>
-          <p class="mt-4 text-slate-500 animate-pulse">_</p>
+                We ship projects.
+            </h2>
+            <p
+                class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed transition-colors"
+            >
+                Hack Club isn't a class. It's a club. We don't have tests or
+                grades. We have projects. Whether it's a personal portfolio, a
+                discord bot, or a video game, you'll build something you're
+                proud of.
+            </p>
+            <ul class="space-y-4 mb-8">
+                {
+                    [
+                        "Build your own website",
+                        "Create a game in JS",
+                        "Design a PCB",
+                        "Deploy a web app",
+                    ].map((item) => (
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300 font-medium">
+                            <div class="bg-green-100 p-1 rounded-full text-green-600">
+                                <ArrowRight size={16} />
+                            </div>
+                            {item}
+                        </li>
+                    ))
+                }
+            </ul>
+            <a
+                href="https://hackclub.com/ship/"
+                target="_blank"
+                rel="noreferrer"
+                class="text-[#ec3750] font-bold text-lg underline hover:decoration-wavy inline-flex items-center gap-2"
+            >
+                See what Hack Clubbers build <ExternalLink size={18} />
+            </a>
         </div>
-      </div>
+        <div class="md:w-1/2 relative">
+            <div
+                class="bg-[#121217] rounded-lg shadow-2xl overflow-hidden border border-[#8492a6] dark:border-slate-600 transform md:rotate-3 transition-transform hover:rotate-0 duration-500"
+            >
+                <div
+                    class="bg-[#17171D] p-3 flex items-center gap-2 border-b border-[#8492a6] dark:border-slate-600"
+                >
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div
+                        class="ml-4 bg-[#252429] rounded-md px-3 py-1 text-xs text-slate-400 font-mono w-full"
+                    >
+                        hackclub-project.js
+                    </div>
+                </div>
+                <div
+                    class="p-6 font-mono text-sm text-slate-300 leading-relaxed overflow-x-auto"
+                >
+                    <p>
+                        <span class="text-purple-400">const</span>
+                        <span class="text-yellow-400">club</span> = <span
+                            class="text-blue-400">new</span
+                        >
+                        <span class="text-green-400">HackClub</span>();
+                    </p>
+                    <p class="mt-2">
+                        <span class="text-purple-400">while</span> (club.members.length
+                        &gt; 0)
+                        {"{"}
+                    </p>
+                    <p class="ml-4 text-slate-400">// We build together</p>
+                    <p class="ml-4">
+                        <span class="text-yellow-400">club</span>.build(<span
+                            class="text-orange-400">'Awesome Projects'</span
+                        >);
+                    </p>
+                    <p class="ml-4">
+                        <span class="text-yellow-400">club</span>.share(<span
+                            class="text-orange-400">'Global Community'</span
+                        >);
+                    </p>
+                    <p class="ml-4">
+                        <span class="text-yellow-400">club</span>.haveFun(<span
+                            class="text-blue-400">true</span
+                        >);
+                    </p>
+                    <p class="mt-2">{"}"}</p>
+                    <p class="mt-4 text-slate-500 animate-pulse">_</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>

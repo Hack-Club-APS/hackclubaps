@@ -1,22 +1,22 @@
 ---
 import { Github, Slack } from "lucide-react";
-import teamMembers from "@/data/members.json";
-import colorPalette from "@/data/colorPalette.json";
+import { members } from "@/data/members";
+import { colors } from "@/data/colors";
 ---
 
 <section id="members" class="py-24 bg-white dark:bg-[#17171D] -translate-y-20">
-    <h1 class="text-3xl font-bold mb-8 text-center colo">Club Members</h1>
+    <h1 class="text-3xl font-bold mb-8 text-center col-span-2">Club Members</h1>
     <div
         class="container grid grid-cols-1 gap-6 sm:grid-cols-2 justify-center mx-auto px-4"
     >
         {
-            teamMembers.map((member) => (
+            members.map((member) => (
                 <div
-                    key={member.id}
+                    id={member.id}
                     class="p-4 flex flex-row items-center group relative w-full sm:w-full rounded-2xl bg-white dark:bg-[#252429] border border-slate-100 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300"
                 >
                     <div
-                        class={`w-14 h-14 rounded-full ${colorPalette[member.color]} flex items-center justify-center text-3xl border-4 border-white dark:border-slate-700 shadow-md group-hover:scale-110 transition-transform duration-300`}
+                        class={`w-14 h-14 rounded-full ${colors[member.color]} flex items-center justify-center text-3xl border-4 border-white dark:border-slate-700 shadow-md group-hover:scale-110 transition-transform duration-300`}
                     >
                         {member.pfp}
                     </div>
@@ -24,7 +24,7 @@ import colorPalette from "@/data/colorPalette.json";
                     <div class="flex ml-auto justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <button class="text-slate-400 hover:text-[#ec3750] transition-colors">
                             <a
-                                href={member.Github}
+                                href={member.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -33,7 +33,7 @@ import colorPalette from "@/data/colorPalette.json";
                         </button>
                         <button class="text-slate-400 hover:text-[#ec3750] transition-colors">
                             <a
-                                href={member.Slack}
+                                href={member.slack}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

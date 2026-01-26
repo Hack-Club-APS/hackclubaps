@@ -1,37 +1,42 @@
 ---
 import { Calendar } from "lucide-astro";
 import EventRow from "./eventrow.astro";
-import events from "@/data/events.json"
+import { events } from "@/data/events";
 ---
 
 <section id="events" class="py-24 bg-[#ec3750] text-white">
-  <div class="max-w-4xl mx-auto px-4">
-    <div
-      class="flex flex-col md:flex-row justify-center items-center mb-12 border-b border-red-400 pb-6"
-    >
-      <div class="ml-1">
-        <h2 class="text-3xl md:text-5xl font-bold mb-2">Upcoming Events</h2>
-        <p class="text-red-100 text-lg">Don't miss our next meeting.</p>
-      </div>
-      <div class="w-20"></div>
-      <div
-        class="mt-4 md:mt-0 flex items-center gap-2 bg-red-800/30 px-4 py-2 rounded-lg backdrop-blur-sm"
-      >
-        <Calendar size={20} />
-        <span class="font-mono font-bold">Room 304 &bull; Fridays @ 3:30PM</span
+    <div class="max-w-4xl mx-auto px-4">
+        <div
+            class="flex flex-col md:flex-row justify-center items-center mb-12 border-b border-red-400 pb-6"
         >
-      </div>
-    </div>
+            <div class="ml-1">
+                <h2 class="text-3xl md:text-5xl font-bold mb-2">
+                    Upcoming Events
+                </h2>
+                <p class="text-red-100 text-lg">Don't miss our next meeting.</p>
+            </div>
+            <div class="w-20"></div>
+            <div
+                class="mt-4 md:mt-0 flex items-center gap-2 bg-red-800/30 px-4 py-2 rounded-lg backdrop-blur-sm"
+            >
+                <Calendar size={20} />
+                <span class="font-mono font-bold"
+                    >Room 304 &bull; Fridays @ 3:30PM</span
+                >
+            </div>
+        </div>
 
-    <div class="space-y-4">
-      {events.map((event) => (
-        <EventRow
-          date={event.date}
-          title={event.title}
-          type={event.type}
-          desc={event.desc}
-        />
-      ))}
+        <div class="space-y-4">
+            {
+                events.map((event) => (
+                    <EventRow
+                        date={event.date}
+                        title={event.title}
+                        type={event.type}
+                        desc={event.desc}
+                    />
+                ))
+            }
+        </div>
     </div>
-  </div>
 </section>

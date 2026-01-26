@@ -3,10 +3,13 @@ import { ogMeta } from "@/config/meta";
 ---
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta
-  name="google-site-verification"
-  content="IM_RTASYZFUbeSY9Haw9VDzkF01t2o6IAdgxTlEwgRY"
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+/>
+<meta
+    name="google-site-verification"
+    content="IM_RTASYZFUbeSY9Haw9VDzkF01t2o6IAdgxTlEwgRY"
 />
 
 <meta name="description" content={ogMeta.description} />
@@ -18,10 +21,10 @@ import { ogMeta } from "@/config/meta";
 <meta property="og:type" content={ogMeta.type ?? "website"} />
 
 {
-  ogMeta.twitter && (
-    <>
-      <meta name="twitter:card" content={ogMeta.twitter.card} />
-      <meta name="twitter:image" content={ogMeta.twitter.image} />
-    </>
-  )
+    ogMeta.twitter && (
+        <>
+            <meta name="twitter:card" content={ogMeta.twitter.card} />
+            <meta name="twitter:image" content={ogMeta.twitter.image} />
+        </>
+    )
 }
