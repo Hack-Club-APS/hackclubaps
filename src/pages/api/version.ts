@@ -1,25 +1,7 @@
 import type { APIRoute } from "astro";
-import fs from "fs";
-import path from "path";
+import { buildInfo } from "@/data/generateBuildInfo";
 
 export const GET: APIRoute = () => {
-  let data;
-
-  try {
-    const filePath = path.join(
-      process.cwd(),
-      "src/data/build-info.json"
-    );
-
-    data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-  } catch {
-    data = {
-      version: "dev",
-      commit: "dev",
-      buildTime: new Date().toISOString(),
-    };
-  }
-
   const vercel = {
     commitAuthor: process.env.VERCEL_GIT_COMMIT_AUTHOR_NAME ?? null,
     vercelENV: process.env.VERCEL_ENV ?? null,
@@ -28,13 +10,13 @@ export const GET: APIRoute = () => {
     vercelBranch: process.env.VERCEL_GIT_COMMIT_REF ?? null,
   };
 
-  return new Response(
-    JSON.stringify({ ...data, ...vercel }, null, 2),
-    {
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "no-store",
-      },
-    }
-  );
+  // Merge build info and Vercel info
+  const data = { ...buildInfo, ...vercel };
+
+  return new Response(JSON.stringify(data, null, 2), {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "no-store",
+    },
+  });
 };

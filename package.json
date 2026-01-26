@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.4.2",
   "scripts": {
-    "dev": "node scripts/build-info.mjs && astro dev",
-    "build": "node scripts/build-info.mjs && astro build",
+    "dev": "node src/data/generateBuildInfo.ts && astro dev",
+    "build": "node src/data/generateBuildInfo.ts && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
