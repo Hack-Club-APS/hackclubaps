@@ -1,7 +1,7 @@
 {
   "name": "hackclubaps",
   "type": "module",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "scripts": {
     "dev": "node src/data/generateBuildInfo.ts && astro dev",
     "build": "node src/data/generateBuildInfo.ts && astro build",
