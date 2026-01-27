@@ -14,7 +14,7 @@ function getCommit(): string {
 
   try {
     return execSync("git rev-parse --short HEAD", {
-      stdio: ["ignore", "pipe", "ignore"]
+      stdio: ["ignore", "pipe", "ignore"],
     })
       .toString()
       .trim();
@@ -24,9 +24,9 @@ function getCommit(): string {
 }
 
 function getVersion(): string {
-  const pkg = JSON.parse(
-    fs.readFileSync("package.json", "utf-8")
-  ) as { version?: string };
+  const pkg = JSON.parse(fs.readFileSync("package.json", "utf-8")) as {
+    version?: string;
+  };
 
   return pkg.version ?? "0.0.0";
 }
@@ -34,7 +34,5 @@ function getVersion(): string {
 export const buildInfo: BuildInfo = {
   version: getVersion(),
   commit: getCommit(),
-  buildTime:
-    process.env.BUILD_TIME ??
-    new Date().toISOString()
+  buildTime: process.env.BUILD_TIME ?? new Date().toISOString(),
 };

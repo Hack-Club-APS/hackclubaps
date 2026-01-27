@@ -1,5 +1,8 @@
 ---
 import { Terminal, Mail, Slack, ExternalLink, Users } from "lucide-astro";
+import { buildInfo } from "@/data/generateBuildInfo";
+const version = buildInfo.version;
+const commit = buildInfo.commit;
 ---
 
 <footer
@@ -9,8 +12,11 @@ import { Terminal, Mail, Slack, ExternalLink, Users } from "lucide-astro";
         class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
     >
         <div class="flex items-center gap-3">
-            <div class="bg-slate-800 p-2 rounded-md">
-                <Terminal size={20} class="text-[#8492a6]" />
+            <div class="bg-[#17171D] p-2 rounded-md">
+                <Terminal
+                    size={20}
+                    class="text-[#8492a6] hover:text-[#ec3750] transition-colors"
+                />
             </div>
             <div>
                 <p
@@ -19,8 +25,9 @@ import { Terminal, Mail, Slack, ExternalLink, Users } from "lucide-astro";
                     Hack Club @ APS
                 </p>
                 <span class="text-sm">Built by</span>
-                <span class="text-sm text-slate-300">
-                    <a href="https://github.com/jaydev-1510">@Jaydev</a></span
+                <a
+                    href="https://github.com/jaydev-1510"
+                    class="text-sm text-slate-300 hover:underline hover:decoration-wavy">@Jaydev</a
                 >
                 <span class="text-sm">with Astro & Tailwind</span>
             </div>
@@ -58,11 +65,17 @@ import { Terminal, Mail, Slack, ExternalLink, Users } from "lucide-astro";
         </div>
     </div>
     <div
-        class="max-w-6xl mx-auto mt-8 text-center md:text-left text-sm text-slate-700"
+        class="max-w-6xl flex flex-col md:flex-row mx-auto mt-8 text-center md:text-left text-sm text-slate-700"
     >
         <p>
             This website is open source. Hack Club is a global network of high
             school hackers.
+        </p>
+        <p
+            class="mt-8 md:mt-0 text-center md:ml-auto hover:text-slate-300 transition-colors"
+            title="Version • Commit hash"
+        >
+            v{version} • {commit}
         </p>
     </div>
 </footer>

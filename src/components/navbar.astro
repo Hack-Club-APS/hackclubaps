@@ -9,7 +9,7 @@ import { Moon, Sun, Menu, X } from "lucide-astro";
     <div
         class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center"
     >
-        <div class="flex items-center gap-2 group cursor-pointer">
+        <div class="flex items-center gap-2 group cursor-pointer" title="Home">
             <a
                 href="/"
                 id="orpheus"
@@ -29,6 +29,7 @@ import { Moon, Sun, Menu, X } from "lucide-astro";
                     href="https://adanipublicschool.org"
                     target="_blank"
                     class="text-slate-400 dark:text-slate-500 font-normal dark:hover:text-[#FFFFFF] transition-colors"
+                    title = "Adani Public School, Mundra"
                     >@ APS</a
                 >
             </a>
@@ -106,7 +107,6 @@ import { Moon, Sun, Menu, X } from "lucide-astro";
 </nav>
 
 <script>
-    // --- Navbar Scroll Effect ---
     const navbar = document.getElementById("navbar");
     const orpheus = document.getElementById("orpheus");
 
@@ -138,7 +138,6 @@ import { Moon, Sun, Menu, X } from "lucide-astro";
         }
     });
 
-    // --- Mobile Menu Toggle ---
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
     const iconMenu = document.getElementById("icon-menu");
@@ -154,12 +153,10 @@ import { Moon, Sun, Menu, X } from "lucide-astro";
 
     menuToggle?.addEventListener("click", toggleMenu);
 
-    // Close menu when a link is clicked
     mobileLinks.forEach((link) => {
         link.addEventListener("click", toggleMenu);
     });
 
-    // --- Dark Mode Logic ---
     const handleToggleClick = () => {
         const element = document.documentElement;
         element.classList.toggle("dark");
