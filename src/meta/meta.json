@@ -2,10 +2,10 @@
   "title": "Hack Club APS",
   "description": "A student-led space for building, coding, and shipping cool projects at Adani Public School.",
   "url": "https://hackclubaps.vercel.app/",
-  "image": "https://hackclubaps.vercel.app/og-image.png",
+  "image": "https://hackclubaps.vercel.app/banner.png",
   "type": "website",
   "twitter": {
     "card": "summary_large_image",
-    "image": "https://hackclubaps.vercel.app/og-image.png"
+    "image": "https://hackclubaps.vercel.app/banner.png"
   }
 }
