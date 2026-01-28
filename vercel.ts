@@ -15,5 +15,25 @@ export const config: VercelConfig = {
       destination: '/api/version',
       permanent: true,
     },
+    {
+      source: '/favicon.ico',
+      destination: '/favicon.svg',
+      permanent: true,
+    },
+    {
+      source: '/banner',
+      destination: '/banner.png',
+      permanent: true,
+    },
+    {
+      source: '/favicon',
+      destination: '/favicon.svg',
+      permanent: true,
+    },
+    {
+      source: '/api/version.json',
+      destination: '/api/version',
+      permanent: true,
+    },
   ],
 };
