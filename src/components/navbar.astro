@@ -1,5 +1,6 @@
 ---
 import { Moon, Sun, Menu, X } from "lucide-astro";
+import Icon from "./icons.astro";
 ---
 
 <nav
@@ -66,17 +67,17 @@ import { Moon, Sun, Menu, X } from "lucide-astro";
             </a>
         </div>
 
-        <div class="flex items-center gap-4 md:hidden">
+        <div class="flex items-center gap-4 h-full md:hidden">
             <button
                 id="theme-toggle-mobile"
-                class="p-2 rounded-full text-slate-600 dark:text-yellow-400"
+                class="p-2 h-[44px] rounded-full text-slate-600 dark:text-yellow-400"
             >
                 <span class="block dark:hidden"><Moon size={24} /></span>
                 <span class="hidden dark:block"><Sun size={24} /></span>
             </button>
-            <button id="menu-toggle" class="text-slate-800 dark:text-white p-2">
-                <span id="icon-menu" class="block"><Menu size={28} /></span>
-                <span id="icon-close" class="hidden"><X size={28} /></span>
+            <button id="menu-toggle" class="text-slate-800 dark:text-white p-0 h-[44px">
+                <span id="icon-menu" class="block"><Icon glyph="menu" size={32} /></span>
+                <span id="icon-close" class="hidden"><Icon glyph="view-close" size={32} /></span>
             </button>
         </div>
     </div>

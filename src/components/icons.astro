@@ -1,0 +1,60 @@
+---
+import type { IconGlyph } from "@/types/icon-names";
+
+interface Props {
+    glyph: IconGlyph;
+    color?: string;
+    size?: number | string;
+    class?: string;
+}
+
+const {
+    glyph,
+    color = "currentColor",
+    size = "1em",
+    class: className,
+    ...rest
+} = Astro.props;
+
+const icons = import.meta.glob("../icons/*.svg", {
+    query: "?raw",
+    eager: true,
+});
+const iconPath = `../icons/${glyph}.svg`;
+const iconModule = icons[iconPath] as { default: string } | undefined;
+
+if (!iconModule) {
+    throw new Error(`[Icon Component] Icon "${glyph}" not found in src/icons/`);
+}
+
+let svgString = iconModule.default;
+
+const cleanedSvg = svgString.replace(/fill="([^"]*)"/g, (match, p1) => {
+    return p1 === "none" || p1.startsWith("url")
+        ? match
+        : 'fill="currentColor"';
+});
+
+const attributes = `
+  width="${size}"
+  height="${size}"
+  fill="${color}"
+  class="${className || ""}"
+  aria-hidden="true"
+  ${Object.entries(rest)
+      .map(([k, v]) => `${k}="${v}"`)
+      .join(" ")}
+`.trim();
+
+const processedSvg = cleanedSvg.replace("<svg", `<svg ${attributes}`);
+---
+
+<Fragment set:html={processedSvg} />
+
+<style>
+    :global(svg) {
+        display: inline-block;
+        vertical-align: middle;
+        flex-shrink: 0;
+    }
+</style>

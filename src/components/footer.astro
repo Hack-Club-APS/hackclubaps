@@ -1,5 +1,5 @@
 ---
-import { Terminal, Mail, Slack, ExternalLink, Users } from "lucide-astro";
+import Icon from "./icons.astro";
 import { buildInfo } from "@/data/generateBuildInfo";
 const version = buildInfo.version;
 const commit = buildInfo.commit;
@@ -13,10 +13,7 @@ const commit = buildInfo.commit;
     >
         <div class="flex items-center gap-3">
             <div class="bg-[#17171D] p-2 rounded-md">
-                <Terminal
-                    size={20}
-                    class="text-[#8492a6] hover:text-[#ec3750] transition-colors"
-                />
+                <Icon glyph="terminal" color="currentColor" size={32} />
             </div>
             <div>
                 <p
@@ -38,28 +35,28 @@ const commit = buildInfo.commit;
                 href="mailto:hackclubaps@gmail.com"
                 class="flex items-center gap-2 hover:text-[#ec3750] transition-colors"
             >
-                <Mail size={18} />
+                <Icon glyph="email" color="currentColor" size={24} />
                 <span>Contact</span>
             </a>
             <a
                 href="https://hackclub.slack.com"
                 class="flex items-center gap-2 hover:text-[#ec3750] transition-colors"
             >
-                <Slack size={18} />
+                <Icon glyph="slack" color="currentColor" size={24} />
                 <span>Slack</span>
             </a>
             <a
                 href="https://github.com/hack-club-aps"
                 class="flex items-center gap-2 hover:text-[#ec3750] transition-colors"
             >
-                <Users size={18} />
+                <Icon glyph="github" color="currentColor" size={24} />
                 <span>Team</span>
             </a>
             <a
                 href="https://hackclub.com"
                 class="flex items-center gap-2 hover:text-[#ec3750] transition-colors"
             >
-                <ExternalLink size={18} />
+                <Icon glyph="external" color="currentColor" size={24} />
                 <span>HQ</span>
             </a>
         </div>

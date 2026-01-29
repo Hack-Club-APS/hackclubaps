@@ -1,5 +1,6 @@
 ---
 import { ArrowRight, ExternalLink } from "lucide-astro";
+import Icon from "./icons.astro";
 ---
 
 <section
@@ -32,7 +33,7 @@ import { ArrowRight, ExternalLink } from "lucide-astro";
                     ].map((item) => (
                         <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300 font-medium">
                             <div class="bg-green-100 p-1 rounded-full text-green-600">
-                                <ArrowRight size={16} />
+                                <Icon glyph="enter" size={24} />
                             </div>
                             {item}
                         </li>
@@ -43,9 +44,9 @@ import { ArrowRight, ExternalLink } from "lucide-astro";
                 href="https://hackclub.com/ship/"
                 target="_blank"
                 rel="noreferrer"
-                class="text-[#ec3750] font-bold text-lg underline hover:decoration-wavy inline-flex items-center gap-2"
+                class="text-[#ec3750] font-bold text-lg underline hover:decoration-wavy inline-flex p-0 items-center gap-2"
             >
-                See what Hack Clubbers build <ExternalLink size={18} />
+                See what Hack Clubbers build <Icon glyph="external" size={24} />
             </a>
         </div>
         <div class="md:w-1/2 relative">

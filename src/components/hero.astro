@@ -1,9 +1,8 @@
 ---
-import { ChevronRight } from "lucide-astro";
+import Icon from "./icons.astro"
 ---
 
 <header id="mission" class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4">
-    {/* Background Shapes */}
     <div
         class="absolute top-0 right-0 -mt-20 w-96 h-96 bg-red-100 rounded-full blur-3xl -z-10 opacity-50 dark:opacity-10"
     >
@@ -51,7 +50,7 @@ import { ChevronRight } from "lucide-astro";
                 href="#join"
                 class="w-80 sm:w-auto px-8 py-4 bg-[#ec3750] text-white text-lg font-bold rounded-full shadow-xl shadow-red-200/20 hover:shadow-2xl hover:bg-[#d63248] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
             >
-                Start Hacking <ChevronRight size={20} strokeWidth={3} />
+                Start Hacking <Icon glyph="view-forward" size={24} />
             </a>
             <a
                 href="#activities"
