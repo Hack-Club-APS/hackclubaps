@@ -8,11 +8,22 @@ export const config: VercelConfig = {
         value: 'application/json; charset=utf-8',
       },
     ]),
+    routes.header('/api/health', [
+      {
+        key: 'Content-Type',
+        value: 'application/json; charset=utf-8',
+      },
+    ]),
   ],
   redirects: [
     {
       source: '/version',
       destination: '/api/version',
+      permanent: true,
+    },
+    {
+      source: '/health',
+      destination: '/api/health',
       permanent: true,
     },
   ],
