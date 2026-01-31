@@ -21,10 +21,5 @@ export const config: VercelConfig = {
       destination: '/api/version',
       permanent: true,
     },
-    {
-      source: '/health',
-      destination: '/api/health',
-      permanent: true,
-    },
   ],
 };
