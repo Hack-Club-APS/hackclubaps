@@ -7,14 +7,14 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://hackclubaps.vercel.app",
   output: "static",
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
   integrations: [
     react(),
     sitemap(),
-    tailwind(),
-    vercel({
-      webAnalytics: {
-        enabled: true,
-      },
-    }),
+    tailwind()
   ],
 });
