@@ -1,7 +1,8 @@
+import type { APIRoute } from "astro";
+
 export const prerender = false;
 
-export async function GET({ request }) {
-  
+export const GET: APIRoute = async ({ request }) => {
   const healthData = {
     status: "UP",
     message: "System is operational",
@@ -16,4 +17,4 @@ export async function GET({ request }) {
       "Cache-Control": "no-cache, no-store, must-revalidate",
     },
   });
-}
+};
