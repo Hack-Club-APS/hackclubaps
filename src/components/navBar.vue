@@ -494,7 +494,7 @@ watch($currentNav, (newVal) => {
          <div 
             v-for="item in items" 
             :key="item.id"
-            class="flex flex-col items-center justify-center transition-all duration-100"
+            class="flex flex-col gap-1 md:flex-row items-center justify-center transition-all duration-100"
             :style="{ 
                width: `${itemWidth}px`, 
                height: '100%',
@@ -514,7 +514,7 @@ watch($currentNav, (newVal) => {
                class="mb-1 transition-colors"
             >
             </div>
-             <span class="font-medium text-black dark:text-white leading-none text-center truncate transition-colors" :style="{ fontSize: dimensions.fontSize, color: internalValue === item.id ? `${props.color}` : 'white' }">{{ item.label }}</span>
+             <span class="font-large text-black dark:text-white leading-none text-center truncate transition-colors" :style="{ color: internalValue === item.id ? `${props.color}` : 'white' }">{{ item.label }}</span>
          </div>
       </div>
     </div>

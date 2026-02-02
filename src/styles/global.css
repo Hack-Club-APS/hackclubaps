@@ -1,325 +1,355 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: Phantom Sans;
-  src:
-    url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff)
-      format("woff"),
-    url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff2)
-      format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: Phantom Sans;
+    src:
+        url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff)
+            format("woff"),
+        url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Regular.woff2)
+            format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: Phantom Sans;
-  src:
-    url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff)
-      format("woff"),
-    url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff2)
-      format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: Phantom Sans;
+    src:
+        url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff)
+            format("woff"),
+        url(https://assets.hackclub.com/fonts/Phantom_Sans_0.7/Bold.woff2)
+            format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 html {
-  font-family: "Phantom Sans", system-ui, sans-serif;
+    font-family: "Phantom Sans", system-ui, sans-serif;
 }
 
 .animate-box {
-  animation: slideup 1s ease-in-out;
-  animation-timeline: view(block 80% 0%);
+    animation: slideup 1s ease-in-out;
+    animation-timeline: view(block 80% 0%);
 }
 
 .animatevent {
-  animation: slideup 1s ease-in-out;
-  animation-timeline: view(block 70% 0%);
+    animation: slideup 1s ease-in-out;
+    animation-timeline: view(block 70% 0%);
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #ec3750, #ff8c37, #ec3750, #ff8c37);
-  background-size: 300% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: flow 3s linear infinite;
+    background: linear-gradient(90deg, #ec3750, #ff8c37, #ec3750, #ff8c37);
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: flow 3s linear infinite;
 }
 
 @keyframes slideup {
-  from {
-    opacity: 0;
-    transform: translateY(20px) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
 
 @keyframes flow {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    /* Move the background completely to the left */
-    background-position: 100% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        /* Move the background completely to the left */
+        background-position: 100% 50%;
+    }
 }
 
 :root {
-  --glass-rgb: #000000;
-  --glass-bg-alpha: 60%;
-  --bg1: #1b1b22;
-  --bg2: #0f0f14;
+    --glass-rgb: #000000;
+    --glass-bg-alpha: 60%;
+    --bg1: #1b1b22;
+    --bg2: #0f0f14;
 }
 
 .dark {
-  --glass-rgb: #000000;
-  --bg1: #1b1b22;
-  --bg2: #0f0f14;
+    --glass-rgb: #000000;
+    --bg1: #1b1b22;
+    --bg2: #0f0f14;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+.app-section::-webkit-scrollbar {
+    display: none;
+}
 body {
-  margin: 0;
-  font-family: 'SF Pro Display', 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom utility classes for mask gradients */
 .mask-b-from-70\% {
-  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
 .mask-b-to-100\% {
-  /* Combined with above */
+    /* Combined with above */
 }
 
 .mask-b-from-50\% {
-  mask-image: linear-gradient(to bottom, black 50%, transparent 75%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 75%);
 }
 
 .mask-b-to-75\% {
-  /* Combined with above */
+    /* Combined with above */
 }
 
 .mask-b-from-20\% {
-  mask-image: linear-gradient(to bottom, black 20%, transparent 55%);
+    mask-image: linear-gradient(to bottom, black 20%, transparent 55%);
 }
 
 .mask-b-to-55\% {
-  /* Combined with above */
+    /* Combined with above */
 }
 
 .mask-t-from-0\% {
-  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    mask-image: linear-gradient(to top, black 0%, transparent 100%);
 }
 
 .mask-t-to-100\% {
-  /* Combined with above */
+    /* Combined with above */
 }
 
 /* Text shadow utilities */
 .text-shadow-xs {
-  text-shadow: 0 1px 2px var(--tw-shadow-color, rgba(0, 0, 0, 0.1));
+    text-shadow: 0 1px 2px var(--tw-shadow-color, rgba(0, 0, 0, 0.1));
 }
 
 /* Animated background keyframes - smooth pan in all directions */
 @keyframes bg-pan {
-  0% {
-    background-position: center center;
-  }
+    0% {
+        background-position: center center;
+    }
 
-  12.5% {
-    background-position: center top;
-  }
+    12.5% {
+        background-position: center top;
+    }
 
-  25% {
-    background-position: right top;
-  }
+    25% {
+        background-position: right top;
+    }
 
-  37.5% {
-    background-position: right center;
-  }
+    37.5% {
+        background-position: right center;
+    }
 
-  50% {
-    background-position: right bottom;
-  }
+    50% {
+        background-position: right bottom;
+    }
 
-  62.5% {
-    background-position: center bottom;
-  }
+    62.5% {
+        background-position: center bottom;
+    }
 
-  75% {
-    background-position: left bottom;
-  }
+    75% {
+        background-position: left bottom;
+    }
 
-  87.5% {
-    background-position: left center;
-  }
+    87.5% {
+        background-position: left center;
+    }
 
-  100% {
-    background-position: center center;
-  }
+    100% {
+        background-position: center center;
+    }
 }
 
 .animate-bg-pan {
-  animation: bg-pan 30s ease-in-out infinite;
-  background-size: 120% 120% !important;
+    animation: bg-pan 30s ease-in-out infinite;
+    background-size: 120% 120% !important;
 }
 
 /* Animation keyframes */
 @keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
 
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
+    50% {
+        opacity: 0.5;
+    }
 }
 
 .animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 /* Line clamp */
 .line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Transition utilities */
 .transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
 }
 
 .transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+    transition-property:
+        color, background-color, border-color, text-decoration-color, fill,
+        stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
 }
 
 .transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
 }
 
 .duration-150 {
-  transition-duration: 150ms;
+    transition-duration: 150ms;
 }
 
 .duration-200 {
-  transition-duration: 200ms;
+    transition-duration: 200ms;
 }
 
 .ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 /* Range input slider styling */
 input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
 }
 
 /* Track styling - WebKit (Chrome, Safari, Edge) */
 input[type="range"]::-webkit-slider-runnable-track {
-  height: 2px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 1px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
 }
 
 .dark input[type="range"]::-webkit-slider-runnable-track {
-  background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Track styling - Firefox */
 input[type="range"]::-moz-range-track {
-  height: 2px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 1px;
-  border: none;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+    border: none;
 }
 
 .dark input[type="range"]::-moz-range-track {
-  background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Thumb styling - WebKit */
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #333;
-  cursor: pointer;
-  border: none;
-  /* Center the thumb on the track: (trackHeight - thumbHeight) / 2 */
-  margin-top: calc((2px - 12px) / 2);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  transition: transform 0.15s ease-out;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+    border: none;
+    /* Center the thumb on the track: (trackHeight - thumbHeight) / 2 */
+    margin-top: calc((2px - 12px) / 2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.15s ease-out;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
+    transform: scale(1.15);
 }
 
 input[type="range"]::-webkit-slider-thumb:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 /* Thumb styling - Firefox */
 input[type="range"]::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #333;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  transition: transform 0.15s ease-out;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.15s ease-out;
 }
 
 input[type="range"]::-moz-range-thumb:hover {
-  transform: scale(1.15);
+    transform: scale(1.15);
 }
 
 /* Dark mode thumb styling */
 .dark input[type="range"]::-webkit-slider-thumb {
-  background: #e5e5e5;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    background: #e5e5e5;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .dark input[type="range"]::-moz-range-thumb {
-  background: #e5e5e5;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    background: #e5e5e5;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Remove focus outline */
 input[type="range"]:focus {
-  outline: none;
+    outline: none;
 }
 
 input[type="range"]:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.3),
+        0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.app-section {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+    pointer-events: none;
+    transition:
+        opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+        transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    background-color: transparent;
+}
+
+/* ACTIVE STATE */
+.app-section.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto; /* Re-enable clicks */
+    z-index: 10;
 }
