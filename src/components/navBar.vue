@@ -80,9 +80,9 @@ const sizePresets = {
     thumbScaleY: 1.1,
   },
   XL: {
-    height: 80,
+    height: 40,
     itemWidth: 120,
-    thumbHeight: 72,
+    thumbHeight: 33,
     bezelWidth: 15,
     bazelWidthBg: 30,
     glassThickness: 160,
@@ -98,7 +98,7 @@ const dimensions = computed(() => sizePresets[props.size])
 const sliderHeight = computed(() => dimensions.value.height)
 const itemWidth = computed(() => dimensions.value.itemWidth)
 const sliderWidth = computed(() => itemWidth.value * props.items.length)
-const thumbWidth = computed(() => itemWidth.value - 4) // Slightly smaller than item
+const thumbWidth = computed(() => itemWidth.value - 8) // Slightly smaller than item
 const thumbHeight = computed(() => dimensions.value.thumbHeight)
 const thumbRadius = computed(() => thumbHeight.value / 2)
 const bezelWidth = computed(() => dimensions.value.bezelWidth)
@@ -472,7 +472,7 @@ watch($currentNav, (newVal) => {
               
               <!-- Thumb Body -->
               <div class="absolute inset-0"
-                   :class="{ 'bg-(--glass-rgb)/(--glass-bg-alpha)': !isActive }"
+                   :class="{ 'bg-(--glass-rgb)/(--glass-bg-alpha) md:bg-[#FFFFFF]/80': !isActive }"
                    :style="{
                       borderRadius: `${thumbRadius}px`,
                       backdropFilter: `url(#${filterId})`,
@@ -511,7 +511,7 @@ watch($currentNav, (newVal) => {
                 width: `${dimensions.iconSize}px`, 
                 height: `${dimensions.iconSize}px`,
                }" 
-               class="mb-1 transition-colors"
+               class="mb-1 md:hidden transition-colors"
             >
             </div>
              <span class="font-large text-black dark:text-white leading-none text-center truncate transition-colors" :style="{ color: internalValue === item.id ? `${props.color}` : 'white' }">{{ item.label }}</span>
