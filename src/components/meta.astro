@@ -15,14 +15,17 @@ import { ogMeta } from "@/config/meta";
 <meta name="description" content={ogMeta.description} />
 
 <meta property="og:title" content={ogMeta.title} />
+<meta property="og:site_name" content={ogMeta.site_name} />
 <meta property="og:description" content={ogMeta.description} />
-<meta property="og:url" content={ogMeta.url} />
+<meta property="og:url" content={Astro.site} />
 <meta property="og:image" content={ogMeta.image} />
 <meta property="og:type" content={ogMeta.type ?? "website"} />
 
 {
     ogMeta.twitter && (
         <>
+            <meta name="twitter:title" content={ogMeta.title} />
+            <meta name="twitter:description" content={ogMeta.description} />
             <meta name="twitter:card" content={ogMeta.twitter.card} />
             <meta name="twitter:image" content={ogMeta.twitter.image} />
         </>

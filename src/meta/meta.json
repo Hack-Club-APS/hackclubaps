@@ -1,7 +1,7 @@
 {
-  "title": "Hack Club APS",
+  "site_name": "Hack Club — APS",
+  "title": "Don't just use technology. Build it.",
   "description": "A student-led space for building, coding, and shipping cool projects at Adani Public School.",
-  "url": "https://hackclubaps.vercel.app/",
   "image": "https://hackclubaps.vercel.app/banner.png",
   "type": "website",
   "twitter": {

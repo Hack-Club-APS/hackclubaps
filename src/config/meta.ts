@@ -1,6 +1,7 @@
 import raw from "@/meta/meta.json";
 
 export interface OgMeta {
+  site_name: string;
   title: string;
   description: string;
   url: string;
@@ -12,12 +13,11 @@ export interface OgMeta {
   };
 }
 
-// runtime + compile-time safety
 function validateOgMeta(data: any): OgMeta {
   if (
+    typeof data?.site_name === "string" &&
     typeof data?.title === "string" &&
     typeof data?.description === "string" &&
-    typeof data?.url === "string" &&
     typeof data?.image === "string" &&
     (data.type === undefined ||
       data.type === "website" ||
