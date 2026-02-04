@@ -16,7 +16,7 @@ export const team: TeamMember[] = [
     color: "red",
     icon: "🦖",
     github: "https://github.com/Jaydev-1510",
-    slack: "https://hackclub.enterprise.slack.com/team/U098VA3G2LS"
+    slack: "https://hackclub.enterprise.slack.com/team/U0A022J58PN"
   },
   {
     name: "Keyaan Khatri",
@@ -33,7 +33,7 @@ export const team: TeamMember[] = [
     bio: "Hardware hacker & rustacean.",
     color: "yellow",
     icon: "🧑🏻‍💻",
-    github: "https://keyaan.me",
+    github: "https://github.com/",
     slack: "https://hackclub.enterprise.slack.com/team/U09KW8WDF99"
   }
 ];
