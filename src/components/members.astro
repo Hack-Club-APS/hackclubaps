@@ -1,5 +1,5 @@
 ---
-import { Github, Slack } from "lucide-react";
+import Icon from "@/components/icons.astro";
 import { members } from "@/data/members";
 import { colors } from "@/data/colors";
 ---
@@ -28,7 +28,7 @@ import { colors } from "@/data/colors";
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Github size={18} />
+                                <Icon glyph="github" size={24} />
                             </a>
                         </button>
                         <button class="text-slate-400 hover:text-[#ec3750] transition-colors">
@@ -37,7 +37,7 @@ import { colors } from "@/data/colors";
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Slack size={18} />
+                                <Icon glyph="slack" size={24} />
                             </a>
                         </button>
                     </div>
