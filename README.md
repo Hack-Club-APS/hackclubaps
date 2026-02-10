@@ -50,8 +50,8 @@ Minimal stack. Maximum speed.
 Clone the repo:
 
 ```bash
-git clone https://github.com/Hack-Club-APS/HackClubAps.git
-cd HackClubAps
+git clone https://github.com/Hack-Club-APS/hackclubaps.git
+cd hackclubaps
 ```
 
 Install dependencies:
