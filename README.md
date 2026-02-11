@@ -71,17 +71,7 @@ Open `http://localhost:4321` in your browser.
 
 ## 🧩 Contributing
 
-Contributions are welcome — especially from club members.
-
-**How to contribute:**
-
-1. Fork the repo
-2. Create a new branch
-3. Make your changes
-4. Open a Pull Request
-
-Keep it clean. Keep it readable.
-
+Refer to [CONTRIBUTING guide](./CONTRIBUTING.md)
 
 ## 📌 Ideas for Contributions
 
